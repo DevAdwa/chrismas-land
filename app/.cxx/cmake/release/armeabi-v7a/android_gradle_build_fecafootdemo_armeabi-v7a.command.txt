@@ -1,0 +1,7 @@
+Executable : /Users/apple/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/.cxx/cmake/release/armeabi-v7a
+fecafootdemo
+jvmArgs : 
+

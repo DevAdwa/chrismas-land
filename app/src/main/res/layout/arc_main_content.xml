@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#41DB0001"
+            android:padding="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/global_statistics"
+                android:textColorLink="@color/light_green"
+                android:textColorHighlight="@color/light_green"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+
+            <com.example.fecafootdemo.utils.views.ArcView
+                android:id="@+id/progress_stats_general"
+                seekarc:rotation="180"
+                seekarc:startAngle="30"
+                seekarc:sweepAngle="300"
+                seekarc:touchInside="true"
+                app:arcWidth="10dp"
+                app:enabled="false"
+                app:progressWidth="5dp"
+                app:progressColor="@color/bg_color"
+                app:arcColor="@android:color/white"
+                app:progress="0"
+                app:max="200"
+                app:thumb="@drawable/circle"
+                app:roundEdges="true"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="top|center"
+                android:padding="30dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/free_layer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remaining"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/icon_1"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/free_circle" />
+
+                        <TextView
+                            android:id="@+id/remaining_count_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_toEndOf="@id/icon_1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="#F1F0F0"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_toEndOf="@id/free_layer"
+                    android:id="@+id/checked_layer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/controlled"/>
+                    <RelativeLayout
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/icon_2"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/checked_circle" />
+
+                        <TextView
+                            android:id="@+id/check_count_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="4dp"
+                            android:layout_toEndOf="@id/icon_2"
+                            android:text="0"
+                            android:textColor="#F1F0F0"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="invisible"
+        android:id="@+id/ticketList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main"
+        android:padding="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/ticket_row_item" />
+
+    <LinearLayout
+        android:id="@+id/empty_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_marginTop="?actionBarSize"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_not_ticket"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="true"/>
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_ticket_controlled"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stats"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_qr_code_scanner_24"
+        app:backgroundTint="@color/bg_color"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:id="@+id/stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main"
+        android:layout_gravity="center"
+        android:paddingStart="4dp"
+        android:scrollbars="none"
+        android:paddingEnd="4dp"
+        android:visibility="gone"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/label_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/pt_circle"
+                    android:gravity="center"
+                    android:text="PT"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/label_1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/first_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prestige"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/first_label_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/first_label"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/first_label_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/first_label"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="0" />
+
+                    <ProgressBar
+                        android:id="@+id/prestige_progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/first_label_count"
+                        tools:progress="20"
+                        android:progressDrawable="@drawable/prestige_progress" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/label_2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/vip_circle"
+                    android:gravity="center"
+                    android:text="VP"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/label_2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/second_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vip"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/second_label_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/second_label"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/second_label_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/second_label"
+                        android:layout_alignParentEnd="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="0" />
+
+                    <ProgressBar
+                        android:id="@+id/vip_progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/second_label_count"
+                        tools:progress="20"
+                        android:progressDrawable="@drawable/vip_progress" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/label_3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/pm_circle"
+                    android:gravity="center"
+                    android:text="PM"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/label_3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/third_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/premium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/third_label_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/third_label"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/third_label_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/third_label"
+                        android:layout_alignParentEnd="true"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <ProgressBar
+                        android:id="@+id/premium_progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/third_label_count"
+                        tools:progress="20"
+                        android:progressDrawable="@drawable/premium_progressbar" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/label_4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ct_circle"
+                    android:gravity="center"
+                    android:text="CL"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@id/label_4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/forth_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/classic"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/forth_label_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/forth_label"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/forth_label_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/forth_label"
+                        android:layout_alignParentEnd="true"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <ProgressBar
+                        android:id="@+id/classic_progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/forth_label_count"
+                        tools:progress="20"
+                        android:progressDrawable="@drawable/ct_progress" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/print_container_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:contentDescription="@null"
+                android:src="@drawable/logo" />
+            <ImageView
+                android:id="@+id/qrcode"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/match_tv"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Equipe A vs Equipe B"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/print_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="8dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/copy_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="© Adwa 2021"
+        android:visibility="gone"
+        android:layout_marginBottom="74dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|\n|\n|\n|\n|\n|"
+        android:layout_marginBottom="74dp"/>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FecaFootDemo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/bg_color</item>
+        <item name="colorPrimaryVariant">@color/bg_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/bg_color</item>
+        <item name="colorOnSecondary">@color/bg_color</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/bg_color</item>
+        <item name="fontFamily">@font/raleway_regular</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.Splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:navigationBarColor">@color/red</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:statusBarColor">@color/bg_color</item>
+        <item name="fontFamily">@font/raleway_regular</item>
+
+
+    </style>
+
+    <style name="Theme.Main" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:navigationBarColor">@color/bg_color</item>
+        <item name="android:statusBarColor">@color/bg_color</item>
+        <item name="backgroundColor">@color/bg_color</item>
+        <item name="fontFamily">@font/raleway_regular</item>
+    </style>
+
+    <style name="Theme.FecaFootDemo.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FecaFootDemo.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FecaFootDemo.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+</resources>

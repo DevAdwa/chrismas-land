@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fecafootdemo" >
+
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".AppLoader"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FecaFootDemo"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon" >
+        <activity
+            android:name=".ui.otp.OtpActivity"
+            android:exported="false"
+            android:label="@string/otp"
+            android:theme="@style/Theme.Main"/>
+        <activity
+            android:name=".ui.dashboard.control.ControlActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.dashboard.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FecaFootDemo.NoActionBar" />
+        <activity
+            android:name=".ui.loader.match.MatchActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.loader.LoaderActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+        <service android:name="android_serialport_api.ScanSerice" />
+    </application>
+
+</manifest>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RipplePulseLayout">
+        <attr name="rippleColor" format="color"></attr>
+        <attr name="rippleType" format="enum">
+            <enum name="fill" value="0"></enum>
+            <enum name="stroke" value="1"></enum>
+        </attr>
+        <attr name="startRadius" format="dimension"></attr>
+        <attr name="endRadius" format="dimension"></attr>
+        <attr name="duration" format="integer"></attr>
+        <attr name="strokeWidth" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomProgressbar">
+        <attr name="android:color" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="innerText" format="string" />
+    </declare-styleable>
+    <color name="default_blue_light">#ff33b5e5</color>
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="progress_gray_dark">#FF383838</color>
+    <declare-styleable name="ArcView">
+        <attr name="thumb" format="reference" />
+        <attr name="thumbOffset" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="arcWidth" format="dimension" />
+        <attr name="progress" format="integer" />
+        <attr name="rotation" format="integer" />
+        <attr name="startAngle" format="integer" />
+        <attr name="sweepAngle" format="integer" />
+        <attr name="arcColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="roundEdges" format="boolean" />
+        <attr name="touchInside" format="boolean" />
+        <attr name="clockwise" format="boolean" />
+        <attr name="enabled" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ArcTheme">
+        <attr name="arcStyle" format="reference" />
+    </declare-styleable>
+
+    <style name="Arc">
+        <item name="arcColor">@color/progress_gray_dark</item>
+    </style>
+
+    <style name="ArcLight">
+        <item name="arcColor">@color/progress_gray</item>
+    </style>
+</resources>

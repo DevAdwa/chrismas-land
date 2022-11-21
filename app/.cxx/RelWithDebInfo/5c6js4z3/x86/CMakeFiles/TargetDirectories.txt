@@ -1,0 +1,3 @@
+/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/.cxx/RelWithDebInfo/5c6js4z3/x86/CMakeFiles/rebuild_cache.dir
+/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/.cxx/RelWithDebInfo/5c6js4z3/x86/CMakeFiles/edit_cache.dir
+/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/.cxx/RelWithDebInfo/5c6js4z3/x86/CMakeFiles/fecafootdemo.dir

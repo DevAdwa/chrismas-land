@@ -1,0 +1,21 @@
+# ninja log v5
+0	485	1668798362	CMakeFiles/fecafootdemo.dir/native-lib.cpp.o	fb4e0868c5d1cf92
+486	557	1668798362	/Users/apple/Documents/AdwaProjects/ChrislandDemo/app/build/intermediates/cmake/debug/obj/x86/libfecafootdemo.so	a2c8e1e8f2d3c000
+0	7	0	clean	5c2ee144a0187135
+0	7	0	clean	5c2ee144a0187135
+2	499	1668854077	CMakeFiles/fecafootdemo.dir/native-lib.cpp.o	fb4e0868c5d1cf92
+499	565	1668854077	/Users/apple/Documents/AdwaProjects/ChrislandDemo/app/build/intermediates/cmake/debug/obj/x86/libfecafootdemo.so	a2c8e1e8f2d3c000
+0	6	0	clean	5c2ee144a0187135
+1	479	1668854131	CMakeFiles/fecafootdemo.dir/native-lib.cpp.o	fb4e0868c5d1cf92
+479	542	1668854131	/Users/apple/Documents/AdwaProjects/ChrislandDemo/app/build/intermediates/cmake/debug/obj/x86/libfecafootdemo.so	a2c8e1e8f2d3c000
+0	12	0	clean	5c2ee144a0187135
+1	503	1668854383	CMakeFiles/fecafootdemo.dir/native-lib.cpp.o	fb4e0868c5d1cf92
+503	572	1668854383	/Users/apple/Documents/AdwaProjects/ChrislandDemo/app/build/intermediates/cmake/debug/obj/x86/libfecafootdemo.so	a2c8e1e8f2d3c000
+0	8	0	clean	5c2ee144a0187135
+1	464	1668854455	CMakeFiles/fecafootdemo.dir/native-lib.cpp.o	fb4e0868c5d1cf92
+464	529	1668854455	/Users/apple/Documents/AdwaProjects/ChrislandDemo/app/build/intermediates/cmake/debug/obj/x86/libfecafootdemo.so	a2c8e1e8f2d3c000
+0	9	0	clean	5c2ee144a0187135
+0	6	0	clean	5c2ee144a0187135
+0	7	0	clean	5c2ee144a0187135
+1	552	1668854753	CMakeFiles/fecafootdemo.dir/native-lib.cpp.o	fb4e0868c5d1cf92
+553	627	1668854753	/Users/apple/Documents/AdwaProjects/ChrislandDemo/app/build/intermediates/cmake/debug/obj/x86/libfecafootdemo.so	a2c8e1e8f2d3c000

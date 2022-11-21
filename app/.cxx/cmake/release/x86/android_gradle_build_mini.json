@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "/Users/apple/Library/Android/sdk/ndk/22.1.7171670/build/cmake/android.toolchain.cmake",
+    "/Users/apple/Library/Android/sdk/ndk/22.1.7171670/build/cmake/platforms.cmake",
+    "/Users/apple/Library/Android/sdk/ndk/22.1.7171670/build/cmake/compiler_id.cmake",
+    "/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/apple/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/.cxx/cmake/release/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/apple/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/.cxx/cmake/release/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "fecafootdemo-Release-x86": {
+      "artifactName": "fecafootdemo",
+      "buildCommand": "/Users/apple/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/.cxx/cmake/release/x86\" fecafootdemo",
+      "abi": "x86",
+      "output": "/Users/apple/Documents/AdwaProjects/FecaFootDemo/app/build/intermediates/cmake/release/obj/x86/libfecafootdemo.so",
+      "runtimeFiles": []
+    }
+  }
+}

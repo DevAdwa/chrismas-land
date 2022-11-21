@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.loader.LoaderActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetEnd="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    android:paddingStart="22dp"
+                    android:paddingEnd="0dp"
+                    android:src="@drawable/logo" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/import_match"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textStyle="bold" />
+
+        <com.example.fecafootdemo.utils.views.PulseEffect
+            android:id="@+id/pulse"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:clipChildren="false"
+            ripple:duration="2000"
+            ripple:endRadius="50dp"
+            ripple:rippleColor="@color/faint_red"
+            ripple:rippleType="fill"
+            ripple:startRadius="42dp"
+            ripple:strokeWidth="2dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_baseline_cloud_download_24" />
+        </com.example.fecafootdemo.utils.views.PulseEffect>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
